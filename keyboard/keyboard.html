@@ -1,12 +1,12 @@
 <script type="text/html" data-template-name="ha-tools-keyboard">
     <div class="form-row">
-        <label for="node-input-name"> 键盘驱动路径</label>
-        <input type="text" id="node-input-name" placeholder="/dev/input/event5">
+        <label for="node-input-name"> Keyboard device path</label>
+        <input type="text" id="node-input-name" placeholder="/dev/input/event0">
     </div>
 </script>
 <script type="text/javascript">
     RED.nodes.registerType('ha-tools-keyboard', {
-        category: '我的小工具',
+        category: 'HA Tools',
         color: '#C0DEED',
         icon: "font-awesome/fa-keyboard-o",
         paletteLabel: 'keyboard',
