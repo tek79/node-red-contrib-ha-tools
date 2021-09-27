@@ -6,7 +6,7 @@ module.exports = function (RED) {
         const node = this
         const inputDevice = config.name
         
-        // 显示当前输入设备
+        // Display current input device
         node.on('input', function (msg) {
             const payload = execSync('cat /proc/bus/input/devices').toString()
             node.send([null, { payload }])
@@ -19,7 +19,7 @@ module.exports = function (RED) {
                 console.log(`stdout: ${data}`);
                 data = JSON.parse(data)
                 if ('code' in data) {
-                    node.status({ fill: "green", shape: "ring", text: `键码：${data.code}` });
+                    node.status({ fill: "green", shape: "ring", text: `Key code：${data.code}` });
                     // console.log(data)
                     node.send([{
                         payload: {
