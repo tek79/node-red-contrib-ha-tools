@@ -25,6 +25,6 @@
   },
   "homepage": "https://github.com/shaonianzhentan/node-red-contrib-ha-tools#readme",
   "dependencies": {
-    "lodash": "^4.17.21",
+    "lodash": "^4.17.21"
   }
 }
