@@ -34,6 +34,7 @@ module.exports = function (RED) {
 
             ls.stderr.on('data', (data) => {
                 node.status({ fill: "red", shape: "ring", text: `stderr: ${data}` });
+                console.log(`stderr: ${data}`);
             });
 
             ls.on('close', (code) => {
