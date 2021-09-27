@@ -4,7 +4,7 @@ const InputEvent = require('input-event');
 
 const inputDevice = process.argv[2]
 if (!fs.existsSync(inputDevice)) {
-    console.log(JSON.stringify({ fill: "red", shape: "ring", text: `未找到设备：${inputDevice}` }));
+    console.log(JSON.stringify({ fill: "red", shape: "ring", text: `Device not found：${inputDevice}` }));
 } else {
     const input = new InputEvent(inputDevice);
     const keyboard = new InputEvent.Keyboard(input);
