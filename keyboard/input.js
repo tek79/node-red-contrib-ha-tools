@@ -8,7 +8,7 @@ if (!fs.existsSync(inputDevice)) {
 } else {
     const input = new InputEvent(inputDevice);
     const keyboard = new InputEvent.Keyboard(input);
-    keyboard.on('keypress', _.throttle(function (data) {
+    keyboard.on('keypress keydown keyup', _.throttle(function (data) {
         console.log(JSON.stringify(data))
     }), 500);
 }
