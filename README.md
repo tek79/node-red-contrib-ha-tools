@@ -1,2 +1,3 @@
 # node-red-contrib-ha-tools
-我的一些工具
+
+A forked version of the node-red-contrib-ha-tools keyboard input node.
