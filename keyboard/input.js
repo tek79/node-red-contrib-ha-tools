@@ -9,12 +9,18 @@ if (!fs.existsSync(inputDevice)) {
     const input = new InputEvent(inputDevice);
     const keyboard = new InputEvent.Keyboard(input);
     keyboard.on('keypress', _.throttle(function (data) {
-        console.log(JSON.stringify(data))
+        try {
+            console.log(JSON.stringify(data))
+        } catch (e) {}
     }), 500);
     keyboard.on('keydown', _.throttle(function (data) {
-        console.log(JSON.stringify(data))
+        try {
+            console.log(JSON.stringify(data))
+        } catch (e) {}
     }), 500);
     keyboard.on('keyup', _.throttle(function (data) {
-        console.log(JSON.stringify(data))
+        try {
+            console.log(JSON.stringify(data))
+        } catch (e) {}
     }), 500);
 }
