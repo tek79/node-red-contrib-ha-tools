@@ -17,7 +17,9 @@ module.exports = function (RED) {
 
             ls.stdout.on('data', (data) => {
                 console.log(`stdout: ${data}`);
-                data = JSON.parse(data)
+                try {
+                    data = JSON.parse(data)
+                } catch (e) {}
                 if ('code' in data) {
                     node.status({ fill: "green", shape: "ring", text: `Key code：${data.code}` });
                     // console.log(data)
